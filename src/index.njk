@@ -1,30 +1,36 @@
 {% extends '_templates/base.njk' %}
 
-{% block page_title %}Index page title{% endblock %}
+{% block page_title %}Band Info Site{% endblock %}
 
-{% block page_description %}The index search description for this page goes here.{% endblock %}
+{% block page_description %}Get acquainted with the British rock band Queen, whose fusion of heavy metal, glam rock, and camp theatrics made them one of the most popular groups of the 1970s.{% endblock %}
 
 {% block content %}
 <div class="container">
-  <h1>Main headline here</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in facilisis velit, aliquam congue dui. Mauris id mi quam. Nam enim leo, bibendum vel efficitur id, elementum malesuada est. Pellentesque interdum tempus eros nec iaculis. Quisque ac est dictum, vehicula nulla quis, condimentum dui.</p>
-  <h2>Library books loop</h2>
-  <p>This loops through data that came from a Google Docs example.</p>
   <div class="row">
-    {% for book in library.books %}
-      <div class="col">
-        <img src="img/{{ book.slug }}.jpg" alt="" class="img-fluid">
-        <h3><a href="books/{{ book.slug }}.html">{{ book.title }}</a></h3>
+    <div class="col">
+      <div id="introduction">
+      <h1>About Queen</h1>
+      <p>Queen is a British rock band who are famous for their fusion of heavy metal, glam rock, and camp theatrics. Formed in 1971 and signed to EMI records in 1973, the quartet quickly became one of the most popular groups of the 1970s. </p>
+      <br>
+      <p>
+        From creating iconic sporting anthems like "We Will Rock You" and "We Are The Champions" to helping popularize the music video format with their innovative sonic journey known as "Bohemian Rhapsody" and becoming one of the biggest stadium rock bands in the world by the early 1980s, Queen has cememted itself as one of the most important bands in rock history.</p>
       </div>
-    {% endfor %}
+      <h5>Meet The Band</h5>
+        <div class="row">
+        {% for members in members.members %}
+        <div class="col-sm-6 col-lg-4">
+          <div class="card text-bg-dark border-danger mb-4">
+            <img src="../src/img/{{ members.image}}" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">{{ members.name }}</h5>
+              <p class="card-text">{{ members.tenure }}</p>
+              <a href="{{ relative_path }}members/{{ members.slug}}.html">{{ members.members}} Read more</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
   </div>
-  <h2>Bookstores loop</h2>
-  <p>This loops through data that came from a Google Sheet example.</p>
-  <hr>
-  {% for store in bookstores.stores %}
-    <h3><a href="{{ store.url }}" target="_blank">{{ store.name }}</a></h3>
-    <p>{{ store.address}}, {{ store.city }}, {{ store.state }} {{ store.zip }}</p>
-    <hr>
-  {% endfor %}
 </div>
 {% endblock %}

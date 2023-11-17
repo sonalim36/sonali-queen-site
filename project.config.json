@@ -9,6 +9,21 @@
       "fileId": "1gDwO-32cgpBDn_0niV0iu6TqQTaRDr4nmSqnT53magY",
       "type": "sheet",
       "name": "bookstores"
+    },
+    {
+      "fileId": "1vTLoJ3y97Fq0CKlpLJ2yFBQa98C0bXOU-CNtPGmsTRg",
+      "type": "sheet",
+      "name": "members"
+    },
+    {
+      "fileId": "1KoFmHJCyLe5rfAJBfKlSJi1q2JV5ess0tr7yq-mVZYg",
+      "type": "sheet",
+      "name": "discography"
+    },
+    {
+      "fileId": "1IF11ARWu9SYVPIE6UkShN-2OjSplC3yWSeBlRlRjkYs",
+      "type": "sheet",
+      "name": "tour"
     }
   ],
   "to_bake": [
@@ -18,6 +33,13 @@
       "array": "books",
       "slug": "slug",
       "path": "books"
+    },
+    {
+      "template": "bake-members",
+      "data": "members",
+      "array": "members",
+      "slug": "slug",
+      "path": "members"
     }
   ]
 }

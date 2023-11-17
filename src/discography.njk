@@ -1,0 +1,31 @@
+{% extends '_templates/base.njk' %}
+
+{% block page_title %}Discography{% endblock %}
+
+{% block page_description %}A list of all of Queens released discography.{% endblock %}
+
+{% block content %}
+<article class="container">
+  <h1>Discography</h1>
+  <p> The British rockers have released 15 studio albums, 10 live albums, 16 compilation albums, two soundtrack albums, 2 extended plays, 73 singles, and seven promotional singles. Since the 1970s, Queen has sold 300 million records worldwide, making them one of the best-selling 
+  artists in history.</p>
+  <br>
+  <p>Here we have listed their 15 official studio releases.</p>
+</article>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+  {% for discography in discography.discography %}
+  <div class="col-sm-6 mb-3 mb-sm-4">
+    <div class="card text-bg-dark border-danger" style="width: 18rem;">
+        <img src="../src/img/{{discography.image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{discography.title}}</h5>
+        <p class="card-text">{{discography.year}}</p>
+        <a href="{{discography.source}}" target="_blank"class="btn btn-danger">Listen here!</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</div>
+{% endblock %}
