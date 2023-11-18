@@ -1,0 +1,28 @@
+{% extends '_templates/base.njk' %}
+{% set relative_path = "../" %}
+{% from '_macros/prose.njk' import prose %}
+
+{% block page_title %}{{ members.slug }}{% endblock %}
+
+{% block page_description %}{{ members.name }} by Capt. Crit McGillicutty{% endblock %}
+
+{% block content %}
+  <article class="container">
+    {% for members in members.members %}
+    <div class="row">
+      <div class="col-sm-4">
+        <img src="..." alt="..." class="img-fluid">
+        <hr class="d-sm-none">
+      </div>
+      <div class="col-sm-8">
+        <img src="../img/{{ members.image }}" alt="" class="img-fluid mb-4">
+        <h1>{{ members.name }}</h1>
+        <h2>{{ members.tenure }}</h2>
+        <h2>{{ members.birthplace }}</h2>
+        <h5>{{ members.instruments }}</h5>
+        {{ members.description }}
+      </div>
+      {% endfor %}
+    </div>
+  </article>
+{% endblock %}
