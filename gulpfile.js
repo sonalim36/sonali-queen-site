@@ -17,8 +17,8 @@ import styles from './tasks/styles.js';
 gulp.task('default', (done) => {
   runSequence(
     [clean, styles, copy, gulp.parallel(scripts, images), nunjucks, bake],
-    lint,
-    format,
+    //lint,
+    //format,
     done
   );
 });

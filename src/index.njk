@@ -1,3 +1,7 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Didact+Gothic&family=EB+Garamond:wght@800&family=Lugrasimo&family=Taviraj:ital,wght@1,800&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+
 {% extends '_templates/base.njk' %}
 
 {% block page_title %}Band Info Site{% endblock %}
@@ -20,7 +24,7 @@
         {% for members in members.members %}
         <div class="col-sm-6 col-lg-4">
           <div class="card text-bg-dark border-danger mb-4">
-            <img src="..img/{{ members.image}}" class="card-img-top">
+            <img src="../img/{{ members.image }}.jpg" class="card-img-top">
             <div class="card-body">
               <h5 class="card-title">{{ members.name }}</h5>
               <p class="card-text">{{ members.tenure }}</p>

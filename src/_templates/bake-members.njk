@@ -2,27 +2,24 @@
 {% set relative_path = "../" %}
 {% from '_macros/prose.njk' import prose %}
 
-{% block page_title %}{{ members.slug }}{% endblock %}
+{% block page_title %}{{ name }}{% endblock %}
 
-{% block page_description %}{{ members.name }} by Capt. Crit McGillicutty{% endblock %}
+{% block page_description %}{{ name }}{% endblock %}
 
 {% block content %}
   <article class="container">
-    {% for members in members.members %}
     <div class="row">
       <div class="col-sm-4">
-        <img src="..." alt="..." class="img-fluid">
-        <hr class="d-sm-none">
+          <img src="../img/{{ imagebw }}.jpg" alt="" class="img-fluid mb-4">
       </div>
       <div class="col-sm-8">
-        <img src="../img/{{ members.image }}" alt="" class="img-fluid mb-4">
-        <h1>{{ members.name }}</h1>
-        <h2>{{ members.tenure }}</h2>
-        <h2>{{ members.birthplace }}</h2>
-        <h5>{{ members.instruments }}</h5>
-        {{ members.description }}
+          <h1>{{ name }}</h1>
+          <h6> {{ instrument }}</h6>
+          <h3>{{ tenure }}</h3>
+          <h5>{{ birthdate }}</h5>
+          <h5>{{ birthplace }}</h5>
+          <p>{{ description }}</p>
       </div>
-      {% endfor %}
     </div>
   </article>
 {% endblock %}
