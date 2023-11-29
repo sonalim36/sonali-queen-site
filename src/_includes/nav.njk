@@ -1,3 +1,7 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Didact+Gothic&family=EB+Garamond:wght@800&family=Quicksand&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+
 <nav class="navbar navbar-light" style="background-color: #f73145;">
   <div class="container-fluid">
     <a class="navbar-brand" href="{{ relative_path }}index.html" style="max-width: 5%">
@@ -13,16 +17,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ relative_path }}tour.html">Tour Dates</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Library books
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            {% for book in library.books %}
-            <li><a class="dropdown-item" href="{{ relative_path }}books/{{ book.slug}}.html">{{ book.title }}</a></li>
-            {% endfor %}
-          </ul>
         </li>
       </ul>
     </div>
