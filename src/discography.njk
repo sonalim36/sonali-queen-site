@@ -6,6 +6,7 @@
 
 {% block content %}
 <article class="container">
+  <div class="row justify-content-center">
   <h1>Discography</h1>
   <p> The British rockers have released 15 studio albums, 10 live albums, 16 compilation albums, two soundtrack albums, 2 extended plays, 73 singles, and seven promotional singles. Since the 1970s, Queen has sold 300 million records worldwide, making them one of the best-selling 
   artists in history.</p>
@@ -13,7 +14,7 @@
   <p>Here we have listed their 15 official studio releases.</p>
 </article>
 <div class="container">
-  <div class="row row-cols-sm-2 row-cols-1 row-cols-md-3 g-4">
+  <div class="row row-cols-sm-2 row-cols-1 row-cols-md-3 g-4 justify-content-center">
   {% for discography in discography.discography %}
   <div class="col-sm-6 mb-3 mb-sm-4">
     <div class="card text-bg-dark border-danger" style="width: 18rem;">

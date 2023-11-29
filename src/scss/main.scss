@@ -23,15 +23,20 @@
 
 @import "jumbotron";
 
+@import "tour-grid";
 h1 {
   font-family: 'EB Garamond', serif;
   color: red;
 }
 
 h3 {
+  font-family: 'Oswald', sans-serif;
   font-size: 1.5rem;
 }
-
+.title h5 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: red;
+}
 p {
   font-family: 'Quicksand', sans-serif;
 }
