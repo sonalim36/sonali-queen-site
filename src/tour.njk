@@ -13,21 +13,24 @@
   <h1>The Rhapsody Tour</h1>
   <p>The Rhapsody Tour is an ongoing worldwide concert tour by Queen + Adam Lambert, the collaboration between British rock band Queen and American singer Adam Lambert. The tour was announced following the success of the biopic film Bohemian Rhapsody.</p>
 </article>
-<h3 class="row justify-content-center" id="tour">DATES</h3>
-<br>
-<div class="container" id="grid">
-  <div class="row justify-content-center">
-    {% for tour in tour.tour %}
-     <div class="col-6 col-md-4">
-      <b>{{tour.date}}</b>
-    </div>
-     <div class="col-6 col-md-4">
-      <p>{{tour.city}}</p>
-    </div>
-    <div class="col-6 col-md-4">
-      <p>{{tour.venue}}</p>
-    </div>
+<table class="table table-hover">
+  <thead class="table-danger">
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Date</th>
+      <th scope="col">City</th>
+      <th scope="col">Venue</th>
+    </tr>   
+  </thead>
+      {% for tour in tour.tour %}
+  <tbody>
+    <tr>
+      <th scope="row justify-content-center"></th>
+      <td>{{tour.date}}</td>
+      <td>{{tour.city}}</td>
+      <td>{{tour.venue}}</td>
+    </tr>
     {% endfor %}
-  </div>
-</div>
+  </tbody>
+</table>
 {% endblock %}
